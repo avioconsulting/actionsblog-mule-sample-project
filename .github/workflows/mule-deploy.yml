@@ -1,0 +1,12 @@
+name: Reference to workflow files necessary to handle deployment of Mule Applciation
+
+on:
+  push:
+    branches: ["develop", "release-*", "main"]
+  pull_request:
+    branches: ["develop", "release-*", "main"]
+
+jobs:
+  Mule-Deploy:
+    uses: ts-software-solutions/shared-workflows/.github/workflows/main.yml@main
+    secrets: inherit
